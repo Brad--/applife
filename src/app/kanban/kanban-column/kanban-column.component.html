@@ -1,0 +1,8 @@
+<div class="column">
+    <header class="column-header">
+        {{ column.title }}
+    </header>
+    <main class="column-body">
+        <app-kanban-card *ngFor="let card of column.cards" [card]="card"></app-kanban-card>
+    </main>
+</div>
