@@ -1,4 +1,4 @@
-import { KanbanColumn } from './kanban-column.model';
+import { KanbanColumnModel } from './kanban-column.model';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class KanbanColumnComponent implements OnInit {
 
-  @Input() column: KanbanColumn;
+  @Input() column: KanbanColumnModel;
 
   constructor() { }
 

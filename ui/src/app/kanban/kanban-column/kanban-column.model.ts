@@ -1,9 +1,9 @@
-import { KanbanCard } from './../kanban-card/kanban-card.model';
-export class KanbanColumn {
+import { KanbanCardModel } from '../kanban-card/kanban-card.model';
+export class KanbanColumnModel {
     title: string;
-    cards: KanbanCard[] = [];
+    cards: KanbanCardModel[] = [];
 
-    constructor(data: Partial<KanbanColumn>) {
+    constructor(data: Partial<KanbanColumnModel>) {
         Object.assign(this, data);
     }
 }

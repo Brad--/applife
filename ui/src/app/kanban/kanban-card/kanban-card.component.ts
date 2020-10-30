@@ -1,4 +1,4 @@
-import { KanbanCard } from './kanban-card.model';
+import { KanbanCardModel } from './kanban-card.model';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class KanbanCardComponent implements OnInit {
 
-  @Input() card: KanbanCard;
+  @Input() card: KanbanCardModel;
 
   constructor() { }
 
