@@ -1,0 +1,17 @@
+:host {
+    .parent {
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .header {
+        padding: 1em;
+        background: pink;
+    }
+
+    .footer {
+        padding: 1em;
+        background: lightgray;
+    }
+}

@@ -1,6 +1,7 @@
-import { KanbanColumn } from './kanban-column/kanban-column.model';
+import { KanbanService } from './../kanban.service';
+import { KanbanColumnModel } from './kanban-column/kanban-column.model';
 import { Component, OnInit } from '@angular/core';
-import { KanbanCard } from './kanban-card/kanban-card.model';
+import { KanbanCardModel } from './kanban-card/kanban-card.model';
 
 @Component({
   selector: 'app-kanban',
@@ -9,27 +10,14 @@ import { KanbanCard } from './kanban-card/kanban-card.model';
 })
 export class KanbanComponent implements OnInit {
 
-  columns: KanbanColumn[] = [{
-    title: 'Planned',
-    cards: [{
-      details: 'Make the Kanban board'
-    }, {
-      details: 'Push to GitHub'
-    }]
-  }, {
-    title: 'In Progress',
-    cards: [{
-      details: 'Yeehaw'
-    }]
-  }, {
-    title: 'Done',
-    cards: []
-  }];
+  columns: KanbanColumnModel[] = [];
 
-  constructor() { }
+  constructor(
+    private kanbanService: KanbanService
+  ) { }
 
   ngOnInit(): void {
-    console.log(this.columns);
+    this.kanbanService.get().subscribe((columns) => this.columns = columns);
   }
 
 }

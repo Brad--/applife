@@ -1,7 +1,7 @@
-export class KanbanCard {
+export class KanbanCardModel {
     details: string;
 
-    constructor(data: Partial<KanbanCard>) {
+    constructor(data: Partial<KanbanCardModel>) {
         Object.assign(this, data);
     }
 }
