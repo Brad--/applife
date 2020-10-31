@@ -1,26 +1,10 @@
 const express = require('express');
-const app = express();
-const port = 3000;
+const mountRoutes = require('./routes');
 
-app.get('/api/kanban', (req, res) => {
-    // TODO Get kanban from db
-    res.send([{
-        title: 'Planned',
-        cards: [{
-          details: 'Make the Kanban board'
-        }, {
-          details: 'Push to GitHub'
-        }]
-      }, {
-        title: 'In Progress',
-        cards: [{
-          details: 'Yeehaw'
-        }]
-      }, {
-        title: 'Done',
-        cards: []
-      }]);
-});
+const app = express();
+mountRoutes(app);
+
+const port = 3000;
 
 app.listen(port, () => {
     console.log('listening at: http://localhost:' + port);
