@@ -7,11 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && node dist/index.js",
     "knex": "knex",
-    "knex:up": "knex migrate:latest"
+    "knex:start": "knex migrate:latest",
+    "knex:down": "knex migrate:down"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-promise-router": "^4.0.1",
     "knex": "^0.21.12",
